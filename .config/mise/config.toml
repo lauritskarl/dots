@@ -1,0 +1,31 @@
+[settings]
+experimental = true
+lockfile = true
+
+[settings.npm]
+bun = true
+
+[env]
+_.file = '.env'
+
+[tools]
+atuin = "18.7.1"
+bat = "0.25.0"
+bun = "1.2.19"
+eza = "0.23.0"
+fzf = "0.65.1"
+harper-ls = "0.54.0"
+helix = "25.07.1"
+lazygit = "0.54.0"
+marksman = "2024-12-18"
+node = "24.5.0"
+"npm:@devcontainers/cli" = "0.80.0"
+starship = "1.23.0"
+usage = "2.2.2"
+yazi = "25.5.31"
+zoxide = "0.9.8"
+
+[tasks.devcontainer-start]
+description = "Build and start the devcontainer"
+run = "devcontainer up --workspace-folder . --docker-path podman --dotfiles-repository https://github.com/lauritskarl/dotfiles"
+alias = "dev"

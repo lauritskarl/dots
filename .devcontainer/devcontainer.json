@@ -1,0 +1,20 @@
+{
+  "name": "devcontainer",
+  "image": "ghcr.io/lauritskarl/devcontainer:latest",
+  "remoteUser": "dev",
+  "init": true,
+  "capAdd": ["CAP_NET_ADMIN", "CAP_MKNOD", "CAP_NET_RAW"],
+  "runArgs": ["--device=/dev/net/tun"],
+  "containerEnv": {
+    "TS_AUTH_KEY": "${localEnv:DEVCONTAINER_TS_AUTH_KEY}",
+    "GITHUB_TOKEN": "${localEnv:DEVCONTAINER_GITHUB_TOKEN}",
+    "ATUIN_USERNAME": "${localEnv:DEVCONTAINER_ATUIN_USERNAME}",
+    "ATUIN_PASSWORD": "${localEnv:DEVCONTAINER_ATUIN_PASSWORD}",
+    "ATUIN_KEY": "${localEnv:DEVCONTAINER_ATUIN_KEY}",
+    "HOME": "/home/dev"
+  },
+  "features": {
+    "ghcr.io/tailscale/codespace/tailscale:1.0.8": {}
+  },
+  "postStartCommand": "sudo tailscale up --accept-routes --ssh --auth-key=\"$TS_AUTH_KEY\" --hostname=devcontainer --operator=\"$USER\" && mise trust && mise install -y && $(mise which atuin) account login -u \"$ATUIN_USERNAME\" -p \"$ATUIN_PASSWORD\" -k \"$ATUIN_KEY\" && $(mise which atuin) sync"
+}
