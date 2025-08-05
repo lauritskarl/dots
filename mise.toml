@@ -1,0 +1,22 @@
+[settings]
+experimental = true
+lockfile = true
+
+[settings.npm]
+bun = true
+
+[env]
+_.file = ".env"
+
+[tools]
+bun = "1.2.19"
+cosign = "2.5.3"
+"npm:@devcontainers/cli" = "0.80.0"
+
+[tasks.devcontainer-start]
+description = "Build and start the devcontainer"
+run = """
+devcontainer up --workspace-folder . \
+--docker-path docker \
+--dotfiles-repository https://github.com/lauritskarl/dots
+"""

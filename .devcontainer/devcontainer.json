@@ -6,11 +6,11 @@
   "capAdd": ["CAP_NET_ADMIN", "CAP_MKNOD", "CAP_NET_RAW"],
   "runArgs": ["--device=/dev/net/tun"],
   "containerEnv": {
-    "TS_AUTH_KEY": "${localEnv:DEVCONTAINER_TS_AUTH_KEY}",
-    "GITHUB_TOKEN": "${localEnv:DEVCONTAINER_GITHUB_TOKEN}",
-    "ATUIN_USERNAME": "${localEnv:DEVCONTAINER_ATUIN_USERNAME}",
-    "ATUIN_PASSWORD": "${localEnv:DEVCONTAINER_ATUIN_PASSWORD}",
-    "ATUIN_KEY": "${localEnv:DEVCONTAINER_ATUIN_KEY}",
+    "TS_AUTH_KEY": "${localEnv:TS_AUTH_KEY}",
+    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
+    "ATUIN_USERNAME": "${localEnv:ATUIN_USERNAME}",
+    "ATUIN_PASSWORD": "${localEnv:ATUIN_PASSWORD}",
+    "ATUIN_KEY": "${localEnv:ATUIN_KEY}",
     "HOME": "/home/dev"
   },
   "features": {

@@ -3,11 +3,11 @@ experimental = true
 lockfile = true
 
 [tools]
-atuin = "18.7.1"
+atuin = "18.8.0"
 bat = "0.25.0"
 eza = "0.23.0"
 fzf = "0.65.1"
-harper-ls = "0.54.0"
+harper-ls = "0.55.0"
 helix = "25.07.1"
 lazygit = "0.54.0"
 marksman = "2024-12-18"
