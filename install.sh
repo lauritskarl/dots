@@ -16,5 +16,3 @@ ln -sf "$PWD/.config/helix/config.toml" "$HOME/.config/helix/config.toml"
 ln -sf "$PWD/.config/helix/languages.toml" "$HOME/.config/helix/languages.toml"
 
 gh auth setup-git
-gh extension install github/gh-copilot
-gh extension install dlvhdr/gh-dash
