@@ -1,2 +1,2 @@
 # dotfiles
-Personal dotfiles repository for all systems.
+Personal dotfiles repository for all systems
