@@ -15,7 +15,8 @@ ln -sf "$PWD/.config/atuin/config.toml" "$HOME/.config/atuin/config.toml"
 ln -sf "$PWD/.config/helix/config.toml" "$HOME/.config/helix/config.toml"
 ln -sf "$PWD/.config/helix/languages.toml" "$HOME/.config/helix/languages.toml"
 
-mise trust
+mise trust $HOME/*
+mise trust /workspaces/*
 mise install -y
 $(mise which atuin) account login \
     --username "$ATUIN_USERNAME" \
