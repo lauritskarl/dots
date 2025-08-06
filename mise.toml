@@ -10,7 +10,6 @@ _.file = ".env"
 
 [tools]
 bun = "1.2.19"
-cosign = "2.5.3"
 "npm:@devcontainers/cli" = "0.80.0"
 
 [tasks.devcontainer-start]
