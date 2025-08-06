@@ -30,7 +30,6 @@ ln -sf "$SCRIPT_DIR/.ssh/config.d/lab" "$SSH_DIR/config.d/lab"
 log "Trusting directories with mise..."
 if command -v mise &>/dev/null; then
     mise trust
-    mise trust "/workspaces/*"
     mise install -y
 else
     log "mise command not found. Skipping mise-related tasks."
