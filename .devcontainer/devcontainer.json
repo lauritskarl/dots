@@ -16,5 +16,5 @@
   "features": {
     "ghcr.io/tailscale/codespace/tailscale:1.0.8": {}
   },
-  "postAttachCommand": "sudo tailscale up --accept-routes --ssh --auth-key=$TS_AUTH_KEY --hostname=devcontainer --operator=$USER"
+  "postAttachCommand": "sudo tailscale up --reset --accept-routes --ssh --auth-key=$TS_AUTH_KEY --hostname=devcontainer --operator=$USER"
 }
