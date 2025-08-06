@@ -2,9 +2,18 @@
 version = "1.2.19"
 backend = "core:bun"
 
+[tools.bun.platforms.linux-arm64]
+checksum = "blake3:3e677f7b8adb0997d496b078fa813794fa19e18b1e9d78e90dba442f44b13b4f"
+size = 37103700
+
 [tools.cosign]
 version = "2.5.3"
 backend = "aqua:sigstore/cosign"
+
+[tools.cosign.platforms.linux-arm64]
+checksum = "sha256:bffabe4cf183122b7de3111257a863c99e7dc6cf1093bfd7bf961de1795589b8"
+size = 148539773
+url = "https://github.com/sigstore/cosign/releases/download/v2.5.3/cosign-linux-arm64"
 
 [tools."npm:@devcontainers/cli"]
 version = "0.80.0"
