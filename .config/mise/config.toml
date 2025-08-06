@@ -2,7 +2,7 @@
 experimental = true
 lockfile = true
 yes = true
-trusted_config_paths = ["~/dotfiles/**", "/workspaces/**"]
+trusted_config_paths = ["/workspaces/iac"]
 
 [settings.npm]
 bun = true
