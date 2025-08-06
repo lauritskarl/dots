@@ -1,6 +1,8 @@
 [settings]
 experimental = true
 lockfile = true
+yes = true
+trusted_config_paths = ["~/dotfiles/**", "/workspaces/**"]
 
 [settings.npm]
 bun = true
