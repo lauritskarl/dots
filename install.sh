@@ -26,13 +26,11 @@ ln -sf "$SCRIPT_DIR/.config/helix/config.toml" "$CONFIG_DIR/helix/config.toml"
 ln -sf "$SCRIPT_DIR/.config/helix/languages.toml" "$CONFIG_DIR/helix/languages.toml"
 ln -sf "$SCRIPT_DIR/.ssh/config" "$SSH_DIR/config"
 ln -sf "$SCRIPT_DIR/.ssh/config.d/lab" "$SSH_DIR/config.d/lab"
-ln -sf "$SCRIPT_DIR/.ssh/config.d/dev" "$SSH_DIR/config.d/dev"
 
 log "Trusting directories with mise..."
 if command -v mise &>/dev/null; then
-    # mise trust "$HOME/.config/mise/config.toml"
-    # mise trust "/workspaces/*"
     mise trust
+    mise trust "/workspaces/*"
     mise install -y
 else
     log "mise command not found. Skipping mise-related tasks."
