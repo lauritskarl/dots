@@ -15,8 +15,6 @@ ln -sf "$PWD/.config/atuin/config.toml" "$HOME/.config/atuin/config.toml"
 ln -sf "$PWD/.config/helix/config.toml" "$HOME/.config/helix/config.toml"
 ln -sf "$PWD/.config/helix/languages.toml" "$HOME/.config/helix/languages.toml"
 
-gh auth setup-git
-
 mise trust
 mise install -y
 $(mise which atuin) account login \
@@ -24,3 +22,4 @@ $(mise which atuin) account login \
     --password "$ATUIN_PASSWORD" \
     --key "$ATUIN_KEY"
 $(mise which atuin) sync
+$(mise which gh) auth setup-git

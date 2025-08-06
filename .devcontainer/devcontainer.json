@@ -16,5 +16,5 @@
   "features": {
     "ghcr.io/tailscale/codespace/tailscale:1.0.8": {}
   },
-  "postStartCommand": "sudo tailscale up --accept-routes --ssh --auth-key=\"$TS_AUTH_KEY\" --hostname=devcontainer --operator=\"$USER\" && mise trust && mise install -y && $(mise which atuin) account login -u \"$ATUIN_USERNAME\" -p \"$ATUIN_PASSWORD\" -k \"$ATUIN_KEY\" && $(mise which atuin) sync"
+  "postAttachCommand": "sudo tailscale up --accept-routes --ssh --auth-key=$TS_AUTH_KEY --hostname=devcontainer --operator=$USER"
 }
