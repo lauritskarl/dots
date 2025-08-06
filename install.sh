@@ -14,7 +14,7 @@ log() {
 : "${ATUIN_KEY:?Environment variable ATUIN_KEY is not set}"
 
 log "Creating configuration directories..."
-mkdir -p "$CONFIG_DIR/fish" "$CONFIG_DIR/git" "$CONFIG_DIR/mise" "$CONFIG_DIR/atuin" "$CONFIG_DIR/helix" "$SSH_DIR/config.d"
+mkdir -p "$CONFIG_DIR/fish" "$CONFIG_DIR/git" "$CONFIG_DIR/mise" "$CONFIG_DIR/atuin" "$CONFIG_DIR/helix" "$CONFIG_DIR/yazi" "$SSH_DIR/config.d"
 
 log "Creating symlinks for configuration files..."
 ln -sf "$SCRIPT_DIR/.config/fish/config.fish" "$CONFIG_DIR/fish/config.fish"
@@ -24,6 +24,8 @@ ln -sf "$SCRIPT_DIR/.config/mise/config.toml" "$CONFIG_DIR/mise/config.toml"
 ln -sf "$SCRIPT_DIR/.config/atuin/config.toml" "$CONFIG_DIR/atuin/config.toml"
 ln -sf "$SCRIPT_DIR/.config/helix/config.toml" "$CONFIG_DIR/helix/config.toml"
 ln -sf "$SCRIPT_DIR/.config/helix/languages.toml" "$CONFIG_DIR/helix/languages.toml"
+ln -sf "$SCRIPT_DIR/.config/yazi/yazi.toml" "$CONFIG_DIR/yazi/yazi.toml"
+ln -sf "$SCRIPT_DIR/.config/yazi/keymap.toml" "$CONFIG_DIR/yazi/keymap.toml"
 ln -sf "$SCRIPT_DIR/.ssh/config" "$SSH_DIR/config"
 ln -sf "$SCRIPT_DIR/.ssh/config.d/lab" "$SSH_DIR/config.d/lab"
 
