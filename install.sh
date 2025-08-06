@@ -26,8 +26,9 @@ ln -sf "$SCRIPT_DIR/.config/helix/languages.toml" "$CONFIG_DIR/helix/languages.t
 
 # log "Trusting directories with mise..."
 # if command -v mise &>/dev/null; then
-    mise trust "$HOME/.config/mise/config.toml"
-    mise trust "/workspaces/*"
+    # mise trust "$HOME/.config/mise/config.toml"
+    # mise trust "/workspaces/*"
+    mise trust
     mise install -y
 # else
     # log "mise command not found. Skipping mise-related tasks."
