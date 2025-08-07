@@ -2,7 +2,7 @@
 experimental = true
 lockfile = true
 yes = true
-trusted_config_paths = ["/workspaces"]
+trusted_config_paths = ["~/Projects", "/workspaces"]
 
 [settings.npm]
 bun = true
