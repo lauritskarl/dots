@@ -1,6 +1,8 @@
 [user]
 	name = Karl Hans Laurits
 	email = karl@laurits.dev
+[core]
+	excludesfile = /Users/karl/.config/git/ignore
 [column]
 	ui = auto
 [branch]
@@ -29,8 +31,6 @@
 [rerere]
 	enabled = true
 	autoupdate = true
-[core]
-	excludesfile = ~/.gitignore
 [rebase]
 	autoSquash = true
 	autoStash = true
