@@ -11,3 +11,47 @@ SentenceCapitalization = false
 [[language]]
 name = "markdown"
 language-servers = ["marksman", "harper-ls"]
+
+[[language]]
+name = "fish"
+formatter = { command = "fish_indent" }
+auto-format = true
+
+[[language]]
+name = "awk"
+formatter = { command = "awk", timeout = 5, args = [ "--file=/dev/stdin", "--pretty-print=/dev/stdout" ] }
+
+[[language]]
+name = "python"
+formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
+auto-format = true
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+
+[language-server.gopls.config]
+gofumpt = true
+
+[[language]]
+name = "hcl"
+language-servers = [ "terraform-ls" ]
+language-id = "terraform"
+
+[[language]]
+name = "tfvars"
+language-servers = [ "terraform-ls" ]
+language-id = "terraform-vars"
+
+[language-server.terraform-ls]
+command = "terraform-ls"
+args = ["serve"]
+
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
