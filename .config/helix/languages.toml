@@ -1,5 +1,3 @@
-# https://writewithharper.com/docs/integrations/helix
-
 [language-server.harper-ls]
 command = "harper-ls"
 args = ["--stdio"]
