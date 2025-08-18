@@ -14,12 +14,13 @@ log() {
 : "${ATUIN_KEY:?Environment variable ATUIN_KEY is not set}"
 
 log "Creating configuration directories..."
-mkdir -p "$CONFIG_DIR/fish" "$CONFIG_DIR/git" "$CONFIG_DIR/mise" "$CONFIG_DIR/atuin" "$CONFIG_DIR/helix" "$CONFIG_DIR/yazi" "$SSH_DIR/config.d"
+mkdir -p "$CONFIG_DIR/fish" "$CONFIG_DIR/git" "$CONFIG_DIR/jj" "$CONFIG_DIR/mise" "$CONFIG_DIR/atuin" "$CONFIG_DIR/helix" "$CONFIG_DIR/yazi" "$SSH_DIR/config.d"
 
 log "Creating symlinks for configuration files..."
 ln -sf "$SCRIPT_DIR/.config/fish/config.fish" "$CONFIG_DIR/fish/config.fish"
 ln -sf "$SCRIPT_DIR/.config/git/config" "$CONFIG_DIR/git/config"
 ln -sf "$SCRIPT_DIR/.config/git/ignore" "$CONFIG_DIR/git/ignore"
+ln -sf "$SCRIPT_DIR/.config/jj/config.toml" "$CONFIG_DIR/jj/config.toml"
 ln -sf "$SCRIPT_DIR/.config/mise/config.toml" "$CONFIG_DIR/mise/config.toml"
 ln -sf "$SCRIPT_DIR/.config/atuin/config.toml" "$CONFIG_DIR/atuin/config.toml"
 ln -sf "$SCRIPT_DIR/.config/helix/config.toml" "$CONFIG_DIR/helix/config.toml"
