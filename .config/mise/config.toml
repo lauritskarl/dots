@@ -3,6 +3,7 @@ experimental = true
 lockfile = true
 yes = true
 trusted_config_paths = ["~/Projects", "/workspaces"]
+idiomatic_version_file_enable_tools = ["python"]
 
 [settings.npm]
 bun = true
@@ -53,6 +54,7 @@ node = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "npm:yaml-language-server" = "latest"
 "pipx:ty" = "latest"
+rclone = "latest"
 rg = "latest"
 ruff = "latest"
 slsa-verifier = "latest"
