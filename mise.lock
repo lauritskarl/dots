@@ -1,3 +1,7 @@
+[tools.age]
+version = "1.2.1"
+backend = "aqua:FiloSottile/age"
+
 [tools.bun]
 version = "1.2.20"
 backend = "core:bun"
@@ -29,3 +33,7 @@ backend = "npm:tombi"
 [tools."npm:yaml-language-server"]
 version = "1.19.1-fce910a.0"
 backend = "npm:yaml-language-server"
+
+[tools.sops]
+version = "3.10.2"
+backend = "aqua:getsops/sops"

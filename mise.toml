@@ -1,7 +1,11 @@
 [settings.npm]
 bun = true
 
+[env]
+_.file = ".env"
+
 [tools]
+age = "latest"
 bun = "latest"
 marksman = "latest"
 "npm:@markdoc/language-server" = "latest"
@@ -10,3 +14,12 @@ marksman = "latest"
 "npm:markdoc-ls" = "latest"
 "npm:tombi" = "latest"
 "npm:yaml-language-server" = "latest"
+sops = "latest"
+
+[tasks.sops-init]
+description = "Initialize encrypted sops secrets"
+run = "sops decrypt tofu.enc.env > .env"
+
+[tasks.install]
+description = "Install dotfiles"
+run = "./install.sh"
