@@ -1,0 +1,12 @@
+[settings.npm]
+bun = true
+
+[tools]
+bun = "latest"
+marksman = "latest"
+"npm:@markdoc/language-server" = "latest"
+"npm:bash-language-server" = "latest"
+"npm:fish-lsp" = "latest"
+"npm:markdoc-ls" = "latest"
+"npm:tombi" = "latest"
+"npm:yaml-language-server" = "latest"

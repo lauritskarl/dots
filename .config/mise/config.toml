@@ -3,22 +3,19 @@ experimental = true
 lockfile = true
 yes = true
 trusted_config_paths = ["~/Projects", "/workspaces"]
-idiomatic_version_file_enable_tools = ["python"]
 
 [settings.npm]
 bun = true
 
-[settings.python]
-uv_venv_auto = true
-
 [tools]
-# add on linux laptop: cargo:systemd-lsp and cargo:caligula
 atuin = "latest"
 bat = "latest"
 bun = "latest"
 cargo = "latest"
 cargo-binstall = "latest"
 "cargo:scooter" = "latest"
+# cargo:caligula = "latest"
+# cargo:systemd-lsp = "latest"
 eza = "latest"
 fastfetch = "latest"
 fd = "latest"
@@ -27,7 +24,6 @@ github-cli = "latest"
 harper-ls = "latest"
 helix = "latest"
 jj = "latest"
-jq = "latest"
 lazydocker = "latest"
 lazygit = "latest"
 lazyjournal = "latest"
@@ -35,23 +31,12 @@ marksman = "latest"
 node = "latest"
 "npm:@charmland/crush" = "latest"
 "npm:@markdoc/language-server" = "latest"
-"npm:@microsoft/compose-language-service" = "latest"
-"npm:bash-language-server" = "latest"
-"npm:dockerfile-language-server-nodejs" = "latest"
-"npm:fish-lsp" = "latest"
-"npm:lldb-vscode" = "latest"
 "npm:markdoc-ls" = "latest"
 "npm:sql-language-server" = "latest"
-"npm:tombi" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
-"npm:yaml-language-server" = "latest"
-rclone = "latest"
 rg = "latest"
-ruff = "latest"
 slsa-verifier = "latest"
 starship = "latest"
-taplo = "latest"
 usage = "latest"
-uv = "latest"
 yazi = "latest"
 zoxide = "latest"
