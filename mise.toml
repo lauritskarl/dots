@@ -18,7 +18,7 @@ sops = "latest"
 
 [tasks.sops-init]
 description = "Initialize encrypted sops secrets"
-run = "sops decrypt tofu.enc.env > .env"
+run = "sops decrypt dots.enc.env > .env"
 
 [tasks.install]
 description = "Install dotfiles"
