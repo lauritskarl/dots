@@ -8,9 +8,11 @@
         pager = delta
         fsmonitor = true
         untrackedCache = true
-        {{- if eq .chezmoi.os "darwin" -}}
-        excludesfile = /Users/karl/.config/git/ignore
-        {{- end -}}
+        {{ if eq .chezmoi.os "darwin" -}}
+        excludesfile = /Users/{{ .chezmoi.username }}/.config/git/ignore
+        {{- else if eq .chezmoi.os "linux" -}}
+        excludesfile = /home/{{ .chezmoi.username }}/.config/git/ignore
+        {{- end }}
 [interactive]
         diffFilter = delta --color-only
 [delta]
@@ -19,10 +21,12 @@
 [gpg]
         format = ssh
 [gpg "ssh"]
-        {{- if eq .chezmoi.os "darwin" -}}
-        allowedSignersFile = /Users/karl/.ssh/allowed_signers
+        {{ if eq .chezmoi.os "darwin" -}}
+        allowedSignersFile = /Users/{{ .chezmoi.username }}/.ssh/allowed_signers
         program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-        {{- end -}}
+        {{- else if eq .chezmoi.os "linux" -}}
+        allowedSignersFile = /home/{{ .chezmoi.username }}/.ssh/allowed_signers
+        {{- end }}
 [tag]
         sort = version:refname
         gpgsign = true
