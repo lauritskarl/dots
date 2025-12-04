@@ -1,0 +1,49 @@
+theme = "dracula"
+
+[editor]
+line-number = "relative"
+cursorline = true
+bufferline = "multiple"
+end-of-line-diagnostics = "hint"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[keys.normal]
+x = "select_line_below"
+X = "select_line_above"
+
+"C-j" = ["half_page_down", "goto_window_center"]
+"C-k" = ["half_page_up", "goto_window_center"]
+
+C-g = [
+    ":write-all",
+    ":new",
+    ":insert-output lazygit",
+    ":buffer-close!",
+    ":redraw",
+    ":reload-all"
+]
+
+C-y = [
+    ':sh rm -f /tmp/unique-file',
+    ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+    ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+    ':open %sh{cat /tmp/unique-file}',
+    ':redraw',
+]
