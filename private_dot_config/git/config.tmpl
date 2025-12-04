@@ -63,11 +63,11 @@
         renames = true
 [help]
         autocorrect = prompt
-{{- if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.os "darwin" -}}
 # [credential "https://github.com"]
 # 	helper = 
 # 	helper = !/opt/homebrew/bin/gh auth git-credential
 # [credential "https://gist.github.com"]
 # 	helper = 
 # 	helper = !/opt/homebrew/bin/gh auth git-credential
-{{- end -}}
+{{- end }}
