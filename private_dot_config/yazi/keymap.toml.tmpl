@@ -1,0 +1,17 @@
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+[[mgr.prepend_keymap]]
+on   = "!"
+for  = "unix"
+run  = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd ~/Documents/Projects"
+desc = "Cd to ~/Documents/Projects"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "c" ]
+run  = "cd ~/.config"
+desc = "Cd to ~/.config"
