@@ -1,11 +1,13 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 {{- $name := promptStringOnce . "name" "Your name" -}}
-{{- $ssh_key := promptStringOnce . "ssh_key" "Your SSH signing key" -}}
+{{- $ssh_key := promptStringOnce . "ssh_key" "SSH signing key" -}}
+{{- $git_user := promptStringOnce . "git_user" "GitHub username" -}}
 
 [data]
     email = {{ $email | quote }}
     name = {{ $name | quote }}
     ssh_key = {{ $ssh_key | quote }}
+    git_user = {{ $git_user | quote }}
 
 [git]
     autoCommit = true
