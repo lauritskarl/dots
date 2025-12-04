@@ -1,11 +1,11 @@
 if status is-interactive
     fish_config theme choose Dracula
     {{- if eq .chezmoi.os "darwin" -}}
-    fish_add_path /Users/karl/.local/bin/
+    fish_add_path /Users/{{ .chezmoi.username }}/.local/bin/
     fish_add_path /opt/homebrew/bin/
     fish_add_path /opt/homebrew/sbin
     fish_add_path /opt/homebrew/opt/postgresql@18/bin
-    source /Users/karl/.config/op/plugins.sh
+    source /Users/{{ .chezmoi.username }}/.config/op/plugins.sh
     {{- end -}}
     mise activate fish | source
     fzf --fish | source
