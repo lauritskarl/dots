@@ -1,15 +1,16 @@
 [init]
         defaultBranch = main
 [user]
-        name = Karl Hans Laurits
-        email = karl@laurits.dev
-        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIERNxt3cnIcfexVELx9Rv/VbP+E64DKVT8iMIYj1e79N
-        # signingkey = /Users/karl/.ssh/id_ed25519.pub
+        name = {{ .name }}
+        email = {{ .email }}
+        signingkey = {{ .ssh_key }}
 [core]
         pager = delta
         fsmonitor = true
         untrackedCache = true
+        {{- if eq .chezmoi.os "darwin" -}}
         excludesfile = /Users/karl/.config/git/ignore
+        {{- end -}}
 [interactive]
         diffFilter = delta --color-only
 [delta]
@@ -18,8 +19,10 @@
 [gpg]
         format = ssh
 [gpg "ssh"]
+        {{- if eq .chezmoi.os "darwin" -}}
         allowedSignersFile = /Users/karl/.ssh/allowed_signers
         program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+        {{- end -}}
 [tag]
         sort = version:refname
         gpgsign = true
@@ -56,9 +59,11 @@
         renames = true
 [help]
         autocorrect = prompt
+{{- if eq .chezmoi.os "darwin" -}}
 # [credential "https://github.com"]
 # 	helper = 
 # 	helper = !/opt/homebrew/bin/gh auth git-credential
 # [credential "https://gist.github.com"]
 # 	helper = 
 # 	helper = !/opt/homebrew/bin/gh auth git-credential
+{{- end -}}
