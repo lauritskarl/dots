@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 tap "charmbracelet/tap"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
@@ -126,3 +127,4 @@ cask "wireshark-app"
 cask "yubico-authenticator"
 cask "zed"
 cask "zen"
+{{ end -}}
