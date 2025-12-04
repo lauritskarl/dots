@@ -1,0 +1,64 @@
+[init]
+        defaultBranch = main
+[user]
+        name = Karl Hans Laurits
+        email = karl@laurits.dev
+        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIERNxt3cnIcfexVELx9Rv/VbP+E64DKVT8iMIYj1e79N
+        # signingkey = /Users/karl/.ssh/id_ed25519.pub
+[core]
+        pager = delta
+        fsmonitor = true
+        untrackedCache = true
+        excludesfile = /Users/karl/.config/git/ignore
+[interactive]
+        diffFilter = delta --color-only
+[delta]
+        navigate = true
+        side-by-side = true
+[gpg]
+        format = ssh
+[gpg "ssh"]
+        allowedSignersFile = /Users/karl/.ssh/allowed_signers
+        program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[tag]
+        sort = version:refname
+        gpgsign = true
+[commit]
+        verbose = true
+        gpgsign = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[pull]
+        rebase = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+[merge]
+        conflictstyle = zdiff3
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[help]
+        autocorrect = prompt
+# [credential "https://github.com"]
+# 	helper = 
+# 	helper = !/opt/homebrew/bin/gh auth git-credential
+# [credential "https://gist.github.com"]
+# 	helper = 
+# 	helper = !/opt/homebrew/bin/gh auth git-credential
