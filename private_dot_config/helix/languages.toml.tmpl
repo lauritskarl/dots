@@ -21,6 +21,14 @@ biome = { command = "biome", args = ["lsp-proxy"] }
 [language-server.gopls.config]
 gofumpt = true
 
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
 # ----------------------------
 # Languages
 # ----------------------------
@@ -71,4 +79,9 @@ auto-format = true
 [[language]]
 name = "php"
 formatter = { command = "mago", args = ["format", "--stdin-input"] }
+auto-format = true
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "ty"]
 auto-format = true
