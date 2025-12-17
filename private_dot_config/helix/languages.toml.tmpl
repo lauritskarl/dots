@@ -15,8 +15,9 @@ validation = true
 "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
 "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.29.0-standalone/all.json" = "k8s/**/*.yaml"
 
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
 
 [language-server.gopls.config]
 gofumpt = true
@@ -28,6 +29,10 @@ args = ["server"]
 [language-server.ty]
 command = "ty"
 args = ["server"]
+
+[language-server.docker-language-server]
+command = "docker-language-server"
+args = ["start"]
 
 # ----------------------------
 # Languages
@@ -84,4 +89,14 @@ auto-format = true
 [[language]]
 name = "python"
 language-servers = ["ruff", "ty"]
+auto-format = true
+
+[[language]]
+name = "docker-compose"
+language-servers = ["docker-language-server"]
+auto-format = true
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-language-server"]
 auto-format = true
