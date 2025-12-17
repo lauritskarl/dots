@@ -22,25 +22,13 @@ args = ["lsp-proxy"]
 [language-server.gopls.config]
 gofumpt = true
 
-[language-server.ruff]
-command = "ruff"
-args = ["server"]
-
-[language-server.ty]
-command = "ty"
-args = ["server"]
-
-[language-server.docker-language-server]
-command = "docker-language-server"
-args = ["start --stdio"]
-
 # ----------------------------
 # Languages
 # ----------------------------
 
 [[language]]
 name = "markdown"
-language-servers = [ "marksman", "harper-ls", "markdown-oxide", "rumdl" ]
+language-servers = [ "marksman", "markdown-oxide", "rumdl", "harper-ls" ]
 text-width = 80
 soft-wrap.enable = true
 soft-wrap.wrap-at-text-width = true
@@ -84,19 +72,4 @@ auto-format = true
 [[language]]
 name = "php"
 formatter = { command = "mago", args = ["format", "--stdin-input"] }
-auto-format = true
-
-[[language]]
-name = "python"
-language-servers = ["ruff", "ty"]
-auto-format = true
-
-[[language]]
-name = "docker-compose"
-language-servers = ["docker-language-server"]
-auto-format = true
-
-[[language]]
-name = "dockerfile"
-language-servers = ["docker-language-server"]
 auto-format = true
