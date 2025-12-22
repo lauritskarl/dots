@@ -1,5 +1,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 
+disable = ["gem", "rubygems"]
+
 [brew]
 greedy_cask = true
 autoremove = true
@@ -51,6 +53,7 @@ repos = [
     "~/Documents/Projects/*/",
     "~/.config/*/"
 ]
+arguments = "--rebase --autostash"
 
 [chezmoi]
 exclude_encrypted = false
