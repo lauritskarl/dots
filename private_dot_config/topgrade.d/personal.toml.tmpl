@@ -1,7 +1,5 @@
 {{ if eq .chezmoi.os "darwin" -}}
 
-disable = ["gem", "rubygems"]
-
 [brew]
 greedy_cask = true
 autoremove = true
@@ -23,6 +21,7 @@ no_retry = true
 show_skipped = true
 cleanup = true
 skip_notify = true
+disable = ["gem", "rubygems"]
 
 [linux]
 arch_package_manager = "pacman"
