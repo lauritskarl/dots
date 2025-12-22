@@ -4,10 +4,12 @@ no_retry = true
 show_skipped = false
 cleanup = true
 skip_notify = true
+allow_root = true
+pre_sudo = true
+sudo_command = "sudo"
+disable = ["gem", "ruby_gems"]
 
 {{ if eq .chezmoi.os "darwin" -}}
-
-disable = ["gem", "ruby_gems"]
 
 [brew]
 greedy_cask = true
@@ -20,10 +22,6 @@ system_prune = true
 use_sudo = false
 
 {{ else if eq .chezmoi.os "linux" }}
-
-allow_root = true
-pre_sudo = true
-sudo_command = "sudo"
 
 [linux]
 arch_package_manager = "pacman"
