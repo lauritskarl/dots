@@ -1,0 +1,62 @@
+Include ~/.orbstack/ssh/config
+
+Include ~/.ssh/config.d/*
+
+Host *
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host archive
+	HostName u502559.your-storagebox.de
+	Port 23
+	User u502559
+
+Host router-karlhansu
+	HostName router.karlhansu.lan
+	Port 22
+	User admin
+
+Host router-pihlaka
+	HostName router.pihlaka.lan
+	Port 22
+	User admin
+
+Host router-reinu
+	HostName router.reinu.lan
+	Port 22
+	User admin
+
+Host antenna-reinu
+	HostName antenna.reinu.lan
+	Port 22
+	User admin
+
+Host lauritskarl-1
+	HostName 193.40.157.25
+	Port 23722
+	User ubuntu
+
+Host lauritskarl-2
+	HostName 193.40.157.25
+	Port 17722
+	User ubuntu
+
+Host lauritskarl-3
+	HostName 193.40.157.25
+	Port 17122
+	User ubuntu
+
+Host enos
+	HostName enos.itcollege.ee
+	Port 22
+	User karlau@taltech.ee
+
+Host doris
+	HostName enos.itcollege.ee
+	Port 22
+	User karlau@taltech.ee
+	LocalForward 1521 doris.itcollege.ee:1521
+
+Host jump-vhk
+	HostName 192.168.18.163
+	Port 22
+	User teabeteenistus
