@@ -39,6 +39,11 @@ run  = "plugin lazygit"
 desc = "run lazygit"
 
 [[mgr.prepend_keymap]]
-on   = [ "g", "s" ]
+on   = [ "g", "s", "n" ]
 run  = "cd sftp://nas"
 desc = "Go to nas"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "s", "a" ]
+run  = "cd sftp://archive"
+desc = "Go to archive"
