@@ -1,0 +1,35 @@
+[misc]
+assume_yes = true
+no_retry = true
+show_skipped = false
+cleanup = true
+skip_notify = true
+allow_root = true
+pre_sudo = true
+sudo_command = "sudo"
+disable = ["gem", "ruby_gems"]
+
+[brew]
+greedy_cask = true
+autoremove = true
+fetch_head = true
+
+[containers]
+runtime = "docker"
+system_prune = true
+use_sudo = false
+
+[git]
+max_concurrency = 5
+repos = [
+    "~/Documents/Projects/*/",
+]
+arguments = "--rebase --autostash"
+
+[chezmoi]
+exclude_encrypted = false
+
+[mise]
+bump = true
+jobs = 4
+interactive = false
