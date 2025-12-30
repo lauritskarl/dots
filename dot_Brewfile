@@ -10,7 +10,6 @@ brew "fish"
 brew "ghostscript"
 brew "git"
 brew "gnupg"
-brew "helix", args: ["HEAD"]
 brew "imagemagick"
 brew "libyaml"
 brew "llvm"
