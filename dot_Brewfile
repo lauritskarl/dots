@@ -9,9 +9,6 @@ brew "node"
 brew "ansible-language-server"
 brew "ansible-lint"
 brew "llvm"
-brew "atuin", restart_service: :changed
-brew "gmp"
-brew "bagels"
 brew "bandwhich"
 brew "bash-language-server"
 brew "bat"
@@ -21,6 +18,7 @@ brew "caddy"
 brew "cargo-binstall"
 brew "chezmoi"
 brew "curl"
+brew "gmp"
 brew "php"
 brew "composer"
 brew "csvlens"
@@ -29,7 +27,6 @@ brew "docker-language-server"
 brew "doggo"
 brew "dua-cli"
 brew "exiftool"
-brew "eza"
 brew "fd"
 brew "ffmpeg"
 brew "fish"
@@ -94,10 +91,8 @@ brew "scooter"
 brew "sevenzip"
 brew "slumber"
 brew "solargraph"
-brew "starship"
 brew "tailscale", link: false
 brew "terraform-ls"
-brew "thefuck"
 brew "tlrc"
 brew "tombi"
 brew "topgrade"
@@ -160,6 +155,7 @@ mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Reeder", id: 6475002485
 mas "Termius", id: 1176074088
+mas "TestFlight", id: 899247664
 mas "uBlock Origin Lite", id: 6745342698
 mas "Web eID", id: 1576665083
 mas "WhatsApp", id: 310633997
