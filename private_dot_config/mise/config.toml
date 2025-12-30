@@ -1,5 +1,4 @@
 [settings]
-trusted_config_paths = ["~/Documents/Projects"]
 experimental = true
 idiomatic_version_file_enable_tools = ["python"]
 
@@ -15,7 +14,6 @@ cargo-binstall = "latest"
 crush = "latest"
 dua = "latest"
 github-cli = "latest"
-ruby = "latest"
 scooter = "latest"
 fzf = "latest"
 fd = "latest"
