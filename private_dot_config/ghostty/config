@@ -1,0 +1,5 @@
+theme = dark:Dracula,light:Dracula
+font-family = "Monaspace Neon NF Regular"
+font-size = 14
+shell-integration-features = "no-cursor,ssh-env"
+maximize = true
