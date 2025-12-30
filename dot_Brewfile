@@ -1,4 +1,3 @@
-tap "nikitabobko/tap"
 brew "openssl@3"
 brew "curl"
 brew "gmp"
