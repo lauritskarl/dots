@@ -1,28 +1,17 @@
 if status is-interactive
     set --global fish_greeting 
     set --global fish_key_bindings fish_vi_key_bindings
-    # set --global --export SHELL fish
     set --global --export EDITOR hx
     set --global --export PAGER bat
-    # set --global --export _ZO_ECHO 1
-    # set --global --export RIPGREP_CONFIG_PATH /Users/karl/.config/ripgrep/config
-
-    # fish_add_path {{ .chezmoi.homeDir }}/.local/bin
-
-    if test -f /opt/homebrew/bin/brew
-        eval (/opt/homebrew/bin/brew shellenv)
-    else if test -f /home/linuxbrew/.linuxbrew/bin/brew
-        eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-    end
-
-    if set -q HOMEBREW_PREFIX
-        fish_add_path $HOMEBREW_PREFIX/opt/postgresql@18/bin
-        fish_add_path $HOMEBREW_PREFIX/opt/llvm/bin
-    end
-
+    {{ if eq .chezmoi.os "darwin" }}
+    eval (/opt/homebrew/bin/brew shellenv)
+    fish_add_path $HOMEBREW_PREFIX/opt/postgresql@18/bin
+    fish_add_path $HOMEBREW_PREFIX/opt/llvm/bin
+    {{ end }}
     type -q mise; and mise activate fish | source
     type -q fzf; and fzf --fish | source
     type -q zoxide; and zoxide init fish --cmd cd | source
 end
-
+{{ if eq .chezmoi.os "darwin" }}
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+{{ end }}
