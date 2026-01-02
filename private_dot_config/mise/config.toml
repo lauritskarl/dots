@@ -1,7 +1,8 @@
 [settings]
-color_theme = "dracula"
 experimental = true
+color_theme = "dracula"
 idiomatic_version_file_enable_tools = ["python", "node"]
+trusted_config_paths = ["~/Documents/Projects"]
 
 [settings.npm]
 package_manager = "bun"
@@ -103,3 +104,4 @@ starship = "latest"
 ty = "latest"
 rumdl = "latest"
 ruff = "latest"
+ruby = "latest"
