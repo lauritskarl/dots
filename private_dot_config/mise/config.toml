@@ -1,9 +1,13 @@
 [settings]
+color_theme = "dracula"
 experimental = true
-idiomatic_version_file_enable_tools = ["python"]
+idiomatic_version_file_enable_tools = ["python", "node"]
 
 [settings.npm]
 package_manager = "bun"
+
+[settings.python]
+uv_venv_auto = true
 
 [tools]
 node = "latest"
