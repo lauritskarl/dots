@@ -17,7 +17,7 @@ validation = true
 
 [language-server.oxlint]
 command = "oxlint"
-args = ["oxlint --lsp"]
+args = ["--lsp"]
 
 [language-server.gopls.config]
 gofumpt = true
