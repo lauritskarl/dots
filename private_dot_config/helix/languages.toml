@@ -36,37 +36,37 @@ auto-format = true
 
 [[language]]
 name = "html"
-language-servers = ["oxlint"]
+language-servers = [ "vscode-html-language-server" ]
 auto-format = true
 
 [[language]]
 name = "css"
-language-servers = ["oxlint"]
+language-servers = [ "vscode-css-language-server" ] 
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = ["oxlint"]
+language-servers = [ "oxlint", "typescript-language-server" ]
 auto-format = true
 
 [[language]]
 name = "typescript"
-language-servers = ["oxlint"]
+language-servers = [ "oxlint", "typescript-language-server" ]
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = ["oxlint"]
+language-servers = [ "oxlint", "typescript-language-server" ]
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = ["oxlint"]
+language-servers = [ "oxlint", "typescript-language-server" ]
 auto-format = true
 
 [[language]]
 name = "json"
-language-servers = ["oxlint"]
+language-servers = [ "vscode-json-language-server" ] 
 auto-format = true
 
 [[language]]
