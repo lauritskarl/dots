@@ -19,6 +19,10 @@ validation = true
 command = "oxlint"
 args = ["--lsp"]
 
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
 [language-server.gopls.config]
 gofumpt = true
 
@@ -46,28 +50,27 @@ auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ "oxlint", "typescript-language-server" ]
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
 
 [[language]]
 name = "typescript"
-language-servers = [ "oxlint", "typescript-language-server" ]
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = [ "oxlint", "typescript-language-server" ]
 auto-format = true
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 
 [[language]]
 name = "jsx"
-language-servers = [ "oxlint", "typescript-language-server" ]
 auto-format = true
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 
 [[language]]
 name = "json"
-language-servers = [ "vscode-json-language-server" ] 
-auto-format = true
+language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 
 [[language]]
 name = "php"
