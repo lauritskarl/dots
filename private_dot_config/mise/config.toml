@@ -1,6 +1,6 @@
 [settings]
 experimental = true
-color_theme = "dracula"
+color_theme = "catppuccin"
 idiomatic_version_file_enable_tools = ["python", "node"]
 trusted_config_paths = ["~/Documents/Projects"]
 
