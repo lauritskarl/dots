@@ -1,0 +1,3 @@
+function lt --wraps='eza --long --icons --hyperlink --all --group-directories-first --smart-group --git --git-repos --tree --max-depth=3' --wraps='eza --long --tree --icons --hyperlink --level=1 --all --group-directories-first --smart-group --git --git-repos' --wraps='eza --long --tree --icons --hyperlink --level=2 --all --group-directories-first --smart-group --git --git-repos' --description 'alias lt eza --long --tree --icons --hyperlink --level=2 --all --group-directories-first --smart-group --git --git-repos'
+    eza --long --tree --icons --hyperlink --level=2 --all --group-directories-first --smart-group --git --git-repos $argv
+end
