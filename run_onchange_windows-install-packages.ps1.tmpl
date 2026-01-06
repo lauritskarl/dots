@@ -1,0 +1,49 @@
+{{- if eq .chezmoi.os "windows" -}}
+$packages = @(
+    "git",
+    "curl",
+    "7zip",
+    "ffmpeg",
+    "imagemagick",
+    "gnupg",
+    "starship",
+    "mise",
+    "php",
+    "composer",
+    "mpv",
+    "nmap",
+    "poppler",
+    "wireshark",
+    "postgresql",
+    "1password",
+    "discord",
+    "libreoffice",
+    "rustdesk",
+    "signal",
+    "tailscale",
+    "winbox",
+    "yubico-authenticator",
+    "balenaetcher"
+)
+
+# Install Scoop
+if (!(Test-Path "$env:USERPROFILE\scoop")) {
+    Write-Host "Installing Scoop..."
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+}
+
+# Add buckets
+scoop bucket add extras
+scoop bucket add versions
+scoop bucket add nerd-fonts
+
+# Install packages
+foreach ($pkg in $packages) {
+    scoop install $pkg
+}
+
+# Install Fonts
+scoop install monaspace-nerd-font
+
+{{ end -}}

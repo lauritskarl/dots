@@ -13,7 +13,11 @@
 [gpg "ssh"]
         allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
         {{ if eq .chezmoi.os "darwin" -}}
-        program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+        program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+        {{ else if eq .chezmoi.os "linux" -}}
+        # linux placeholder
+        {{ else if eq .chezmoi.os "windows" -}}
+        # windows placeholder
         {{- end }}
 [tag]
         sort = version:refname

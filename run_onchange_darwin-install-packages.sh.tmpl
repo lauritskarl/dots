@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Hash of Brewfile content to trigger script on change:
+{{ include "dot_Brewfile" | sha256sum }}
+
+echo "Running brew bundle..."
+brew bundle --global
+{{ end }}
