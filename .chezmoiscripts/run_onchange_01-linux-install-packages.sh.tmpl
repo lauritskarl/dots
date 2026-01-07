@@ -1,0 +1,37 @@
+{{- if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch") -}}
+#!/bin/bash
+set -euo pipefail
+
+# Packages hash: {{ .packages.linux.arch | toJson | sha256sum }}
+
+# Official repository packages
+packages=(
+{{ range .packages.linux.arch.pacman -}}
+    {{ . | quote }}
+{{ end -}}
+)
+
+echo "Installing official packages via pacman..."
+sudo pacman -Syu --noconfirm --needed "${packages[@]}"
+
+# AUR packages
+aur_packages=(
+{{ range .packages.linux.arch.aur -}}
+    {{ . | quote }}
+{{ end -}}
+)
+
+if command -v yay &> /dev/null; then
+    echo "Installing AUR packages via yay..."
+    yay -S --noconfirm --needed "${aur_packages[@]}"
+elif command -v paru &> /dev/null; then
+    echo "Installing AUR packages via paru..."
+    paru -S --noconfirm --needed "${aur_packages[@]}"
+else
+    echo "AUR helper (yay/paru) not found. Skipping AUR packages:"
+    printf "  - %s\n" "${aur_packages[@]}"
+    echo "Please install them manually or install yay/paru."
+fi
+
+echo "Package installation complete."
+{{ end -}}

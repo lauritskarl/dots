@@ -1,0 +1,39 @@
+[packages.darwin]
+brews = [
+    # Core system tools
+    "curl",
+    "git",
+    "gnupg",
+    "openssh",
+    "wget",
+    # Shells (need system integration)
+    "fish",
+    "nushell",
+    # Bootstrap tools
+    "mas",
+    "mise",
+    # System libraries
+    "bison",
+    "ghostscript",
+    "gmp",
+    "libyaml",
+    "llvm",
+    "openssl@3",
+    "re2c",
+    # Media processing
+    "exiftool",
+    "ffmpeg",
+    "imagemagick",
+    # Development
+    "composer",
+    "php",
+    # PDF/documents
+    "poppler",
+    # Network tools
+    "lynx",
+    "nmap",
+    "wireshark",
+    # Other
+    "mpv",
+    "sevenzip",
+]

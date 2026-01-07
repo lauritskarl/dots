@@ -1,3 +1,8 @@
-function lt --wraps='eza --long --icons --hyperlink --all --group-directories-first --smart-group --git --git-repos --tree --max-depth=3' --wraps='eza --long --tree --icons --hyperlink --level=1 --all --group-directories-first --smart-group --git --git-repos' --wraps='eza --long --tree --icons --hyperlink --level=2 --all --group-directories-first --smart-group --git --git-repos' --description 'alias lt eza --long --tree --icons --hyperlink --level=2 --all --group-directories-first --smart-group --git --git-repos'
-    eza --long --tree --icons --hyperlink --level=2 --all --group-directories-first --smart-group --git --git-repos $argv
+function lt --description 'Tree listing with eza'
+    set -l level 2
+    if test (count $argv) -gt 0; and string match -qr '^\d+$' -- $argv[1]
+        set level $argv[1]
+        set -e argv[1]
+    end
+    eza --long --tree --icons --hyperlink --level=$level --all --group-directories-first --git-ignore --ignore-glob=.git --smart-group --git --git-repos $argv
 end

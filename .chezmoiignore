@@ -1,1 +1,22 @@
 README.md
+
+# Platform-specific nushell config paths
+{{ if ne .chezmoi.os "darwin" }}
+Library/
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
+.config/nushell/
+{{ end }}
+{{ if ne .chezmoi.os "windows" }}
+AppData/
+{{ end }}
+
+# Fish shell not available on Windows via Scoop
+{{ if eq .chezmoi.os "windows" }}
+.config/fish/
+{{ end }}
+
+# macOS-only files
+{{ if ne .chezmoi.os "darwin" }}
+.zprofile
+{{ end }}

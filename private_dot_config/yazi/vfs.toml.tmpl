@@ -1,0 +1,25 @@
+[services.nas]
+type = "sftp"
+host = "nas.cormo-tegu.ts.net"
+user = "karl"
+port = 22
+{{ if eq .chezmoi.os "darwin" -}}
+identity_agent = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+{{ else if eq .chezmoi.os "linux" -}}
+identity_agent = "~/.1password/agent.sock"
+{{ else if eq .chezmoi.os "windows" -}}
+identity_agent = "~/.1password/agent.sock"
+{{- end }}
+
+[services.archive]
+type = "sftp"
+host = "u502559.your-storagebox.de"
+user = "u502559"
+port = 23
+{{ if eq .chezmoi.os "darwin" -}}
+identity_agent = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+{{ else if eq .chezmoi.os "linux" -}}
+identity_agent = "~/.1password/agent.sock"
+{{ else if eq .chezmoi.os "windows" -}}
+identity_agent = "~/.1password/agent.sock"
+{{- end }}

@@ -1,0 +1,4 @@
+[packages.windows]
+fonts = [
+    "monaspace-nerd-font",
+]

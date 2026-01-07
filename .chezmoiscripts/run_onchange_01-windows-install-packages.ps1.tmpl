@@ -1,0 +1,31 @@
+{{- if eq .chezmoi.os "windows" -}}
+$ErrorActionPreference = "Stop"
+
+# Packages hash: {{ .packages.windows | toJson | sha256sum }}
+
+# Add buckets
+Write-Host "Adding Scoop buckets..."
+{{ range .packages.windows.buckets -}}
+scoop bucket add {{ . }}
+{{ end }}
+
+# Install packages
+Write-Host "Installing Scoop packages..."
+$packages = @(
+{{ range .packages.windows.scoop -}}
+    {{ . | quote }}
+{{ end -}}
+)
+
+foreach ($pkg in $packages) {
+    scoop install $pkg
+}
+
+# Install fonts
+Write-Host "Installing fonts..."
+{{ range .packages.windows.fonts -}}
+scoop install {{ . }}
+{{ end }}
+
+Write-Host "Package installation complete."
+{{ end -}}

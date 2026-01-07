@@ -44,6 +44,10 @@ runtime = "podman"
 system_prune = true
 use_sudo = false
 
+{{ else if eq .chezmoi.os "windows" }}
+
+# Windows placeholder
+
 {{ end -}}
 
 [git]

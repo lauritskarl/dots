@@ -1,0 +1,6 @@
+[packages.windows]
+buckets = [
+    "extras",
+    "nerd-fonts",
+    "versions",
+]

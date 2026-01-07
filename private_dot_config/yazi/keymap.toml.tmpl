@@ -10,10 +10,13 @@ desc = "Open $SHELL here"
 on = [ "g", "r" ]
 run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"'
 
+{{ if eq .chezmoi.os "darwin" -}}
 [[mgr.prepend_keymap]]
 on = "<C-p>"
 run = 'shell -- qlmanage -p "$@"'
+desc = "Quick Look preview"
 
+{{ end -}}
 [[mgr.prepend_keymap]]
 on   = [ "g", "p" ]
 run  = "cd ~/Documents/Projects"

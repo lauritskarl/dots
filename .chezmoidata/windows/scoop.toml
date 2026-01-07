@@ -1,0 +1,41 @@
+[packages.windows]
+scoop = [
+    # Core system tools
+    "curl",
+    "git",
+    "gnupg",
+    "wget",
+    # Shells (need system integration)
+    "nushell",
+    # Bootstrap tools
+    "mise",
+    # Media processing
+    "exiftool",
+    "ffmpeg",
+    "imagemagick",
+    # Development
+    "composer",
+    "php",
+    # PDF/documents
+    "poppler",
+    # Network tools
+    "lynx",
+    "nmap",
+    "wireshark",
+    # GUI applications
+    "1password",
+    "balenaetcher",
+    "discord",
+    "helium",
+    "libreoffice",
+    "mpv",
+    "raspberry-pi-imager",
+    "rustdesk",
+    "signal",
+    "tailscale",
+    "winbox",
+    "yubico-authenticator",
+    "zed",
+    # Other
+    "7zip",
+]

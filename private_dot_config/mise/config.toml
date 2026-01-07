@@ -22,9 +22,9 @@ bottom = "latest"
 dua = "latest"
 bat = "latest"
 yazi = "latest"
-# helix = "latest"
+helix = "latest"
 github-cli = "latest"
-crush = "latest"
+
 scooter = "latest"
 xh = "latest"
 lazydocker = "latest"
@@ -48,7 +48,7 @@ resvg = "latest"
 zoxide = "latest"
 chezmoi = "latest"
 fnox = "latest"
-gemini-cli = "latest"
+
 lazyjournal = "latest"
 hurl = "latest"
 marp-cli = "latest"
@@ -85,20 +85,8 @@ harper-ls = "latest"
 "cargo:bandwhich" = "latest"
 "cargo:hl" = "latest"
 "cargo:topgrade" = "latest"
-codex = "latest"
-claude-code = { version = "latest", bin = "claude", platforms = """
-[linux-arm64]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{version}/linux-arm64/claude"
 
-[linux-x64]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{version}/linux-x64/claude"
 
-[macos-arm64]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{version}/darwin-arm64/claude"
-
-[macos-x64]
-url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{version}/darwin-x64/claude"
-""", version_list_url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest" }
 starship = "latest"
 ty = "latest"
 rumdl = "latest"

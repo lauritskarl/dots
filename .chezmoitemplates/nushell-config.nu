@@ -34,7 +34,3 @@ alias lg = lazygit
 alias ld = lazydocker
 alias lj = lazyjournal
 alias oc = opencode
-alias cr = crush
-alias cl = claude
-alias ge = gemini
-alias cx = codex
