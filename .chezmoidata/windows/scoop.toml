@@ -7,7 +7,7 @@ scoop = [
     "sqlite",
     "wget",
     # Shells (need system integration)
-    "nushell",
+    "nu",
     # Bootstrap tools
     "mise",
     # Media processing
