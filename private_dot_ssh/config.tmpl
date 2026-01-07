@@ -1,11 +1,8 @@
 Host *
-    {{ if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.os "darwin" -}}
     IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-    {{- else if eq .chezmoi.os "linux" -}}
-    # Placeholder: Ensure this path matches your 1Password agent socket
+{{ else if eq .chezmoi.os "linux" -}}
     IdentityAgent "~/.1password/agent.sock"
-    {{- else if eq .chezmoi.os "windows" -}}
-    # Placeholder: Windows OpenSSH agent pipe
-    IdentityAgent "\\\\.\\pipe\\openssh-ssh-agent"
-    {{- end }}
-
+{{ else if eq .chezmoi.os "windows" -}}
+    IdentityAgent "\\.\pipe\openssh-ssh-agent"
+{{- end }}
