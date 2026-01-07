@@ -4,6 +4,7 @@ scoop = [
     "curl",
     "git",
     "gnupg",
+    "sqlite",
     "wget",
     # Shells (need system integration)
     "nushell",

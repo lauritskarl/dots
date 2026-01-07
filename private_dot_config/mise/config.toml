@@ -15,7 +15,7 @@ node = "latest"
 bun = "latest"
 go = "latest"
 rust = "latest"
-sqlite = "latest"
+
 uv = "latest"
 cargo-binstall = "latest"
 bottom = "latest"
