@@ -18,7 +18,7 @@ Write-Host "Installing remaining Scoop packages..."
 $packages = @(
 {{ range $index, $pkg := .packages.windows.scoop -}}
 {{ if ne $pkg "git" }}
-    {{ $pkg | quote }},
+{{ if $index }}, {{ end }}    {{ $pkg | quote }}
 {{ end }}
 {{ end -}}
 )
