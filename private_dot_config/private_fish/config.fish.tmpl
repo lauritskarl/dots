@@ -3,11 +3,11 @@ if status is-interactive
     set --global fish_key_bindings fish_vi_key_bindings
     set --global --export EDITOR hx
     set --global --export PAGER bat
-    {{ if eq .chezmoi.os "darwin" }}
+    {{ if eq .chezmoi.os "darwin" -}}
     eval (/opt/homebrew/bin/brew shellenv)
-    fish_add_path $HOMEBREW_PREFIX/opt/postgresql@18/bin
-    fish_add_path $HOMEBREW_PREFIX/opt/llvm/bin
-    {{ end }}
+    {{ else if eq .chezmoi.os "linux" -}}
+    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+    {{ end -}}
     type -q mise; and mise activate fish | source
     type -q fzf; and fzf --fish | source
     type -q zoxide; and zoxide init fish --cmd cd | source

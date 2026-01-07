@@ -1,43 +1,17 @@
 [packages.linux.arch]
 pacman = [
-    # Core system tools
+    # Build tools (needed for AUR)
     "base-devel",
-    "curl",
-    "git",
-    "gnupg",
-    "wget",
-    # Shells (need system integration)
-    "fish",
-    "nushell",
-    # Bootstrap tools
-    "mise",
-    # Terminal
+    # Terminal (no brew formula)
     "ghostty",
     # Fonts
     "ttf-monaspace-variable",
-    # "ttf-monaspace-frozen",
-    # Media processing
-    "ffmpeg",
-    "imagemagick",
-    "perl-image-exiftool",
-    # Development
-    "composer",
-    "php",
-    # PDF/documents
-    "poppler",
-    # Network tools
-    "lynx",
-    "nmap",
+    # System services
+    "flatpak",
     "tailscale",
+    # GUI apps (not on Flatpak or prefer native)
     "wireshark-qt",
-    # GUI applications
-    "discord",
-    "libreoffice-fresh",
-    "mpv",
-    "rpi-imager",
-    "signal-desktop",
-    "winbox",
     "zed",
-    # Other
-    "p7zip",
+    # Disk imaging CLI
+    "caligula",
 ]

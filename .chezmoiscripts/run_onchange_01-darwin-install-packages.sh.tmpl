@@ -2,17 +2,26 @@
 #!/bin/zsh
 set -euo pipefail
 
-# Packages hash: {{ .packages.darwin | toJson | sha256sum }}
+# Packages hash:
+# common: {{ .packages.common | toJson | sha256sum }}
+# darwin: {{ .packages.darwin | toJson | sha256sum }}
 
 echo "Installing Homebrew packages..."
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
+# Common brews (shared with Linux)
+{{ range .packages.common.brews -}}
+brew {{ . | quote }}
+{{ end }}
+# macOS-only brews
 {{ range .packages.darwin.brews -}}
 brew {{ . | quote }}
-{{ end -}}
+{{ end }}
+# Casks
 {{ range .packages.darwin.casks -}}
 cask {{ . | quote }}
-{{ end -}}
+{{ end }}
+# Mac App Store
 {{ range .packages.darwin.mas -}}
 mas {{ .name | quote }}, id: {{ .id }}
 {{ end -}}

@@ -2,35 +2,53 @@
 #!/bin/bash
 set -euo pipefail
 
-# Packages hash: {{ .packages.linux.arch | toJson | sha256sum }}
+# Packages hash:
+# common: {{ .packages.common | toJson | sha256sum }}
+# pacman: {{ .packages.linux.arch.pacman | toJson | sha256sum }}
+# aur: {{ .packages.linux.arch.aur | toJson | sha256sum }}
+# flatpaks: {{ .packages.linux.flatpaks | toJson | sha256sum }}
 
-# Official repository packages
-packages=(
+# Ensure brew is in PATH
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Install pacman packages first (includes flatpak)
+echo "Installing pacman packages..."
+sudo pacman -Syu --noconfirm --needed \
 {{ range .packages.linux.arch.pacman -}}
-    {{ . | quote }}
+    {{ . | quote }} \
+{{ end }}
+
+# Setup Flathub if not already configured
+if ! flatpak remote-list | grep -q flathub; then
+    echo "Adding Flathub remote..."
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+fi
+
+# Install Homebrew packages and Flatpaks via brew bundle
+echo "Installing Homebrew packages and Flatpaks..."
+brew bundle --no-lock --file=/dev/stdin <<EOF
+# Common brews (CLI tools)
+{{ range .packages.common.brews -}}
+brew {{ . | quote }}
+{{ end }}
+# Flatpak GUI apps
+{{ range .packages.linux.flatpaks -}}
+flatpak {{ . | quote }}
 {{ end -}}
-)
+EOF
 
-echo "Installing official packages via pacman..."
-sudo pacman -Syu --noconfirm --needed "${packages[@]}"
-
-# AUR packages
-aur_packages=(
-{{ range .packages.linux.arch.aur -}}
-    {{ . | quote }}
-{{ end -}}
-)
-
+# Install AUR packages
+echo "Installing AUR packages..."
 if command -v yay &> /dev/null; then
-    echo "Installing AUR packages via yay..."
-    yay -S --noconfirm --needed "${aur_packages[@]}"
+{{ range .packages.linux.arch.aur -}}
+    yay -S --noconfirm --needed {{ . | quote }}
+{{ end }}
 elif command -v paru &> /dev/null; then
-    echo "Installing AUR packages via paru..."
-    paru -S --noconfirm --needed "${aur_packages[@]}"
+{{ range .packages.linux.arch.aur -}}
+    paru -S --noconfirm --needed {{ . | quote }}
+{{ end }}
 else
-    echo "AUR helper (yay/paru) not found. Skipping AUR packages:"
-    printf "  - %s\n" "${aur_packages[@]}"
-    echo "Please install them manually or install yay/paru."
+    echo "AUR helper (yay/paru) not found. Skipping AUR packages."
 fi
 
 echo "Package installation complete."
