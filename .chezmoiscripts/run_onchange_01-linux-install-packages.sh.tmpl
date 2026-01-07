@@ -26,7 +26,7 @@ fi
 
 # Install Homebrew packages and Flatpaks via brew bundle
 echo "Installing Homebrew packages and Flatpaks..."
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 # Common brews (CLI tools)
 {{ range .packages.common.brews -}}
 brew {{ . | quote }}

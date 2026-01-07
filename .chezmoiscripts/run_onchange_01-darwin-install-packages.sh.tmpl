@@ -8,7 +8,7 @@ set -euo pipefail
 
 echo "Installing Homebrew packages..."
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 # Common brews (shared with Linux)
 {{ range .packages.common.brews -}}
 brew {{ . | quote }}

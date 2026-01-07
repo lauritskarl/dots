@@ -22,7 +22,7 @@ bottom = "latest"
 dua = "latest"
 bat = "latest"
 yazi = "latest"
-helix = "latest"
+# helix = "latest"
 github-cli = "latest"
 
 scooter = "latest"
