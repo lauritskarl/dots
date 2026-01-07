@@ -6,7 +6,7 @@ $ErrorActionPreference = "Stop"
 # Add buckets
 Write-Host "Adding Scoop buckets..."
 {{ range .packages.windows.buckets -}}
-& "$env:USERPROFILE\scoop\shims\scoop.exe" bucket add {{ . }}
+& "$env:USERPROFILE\scoop\shims\scoop" bucket add {{ . }}
 {{ end }}
 
 # Install packages
@@ -18,13 +18,13 @@ $packages = @(
 )
 
 foreach ($pkg in $packages) {
-    & "$env:USERPROFILE\scoop\shims\scoop.exe" install $pkg
+    & "$env:USERPROFILE\scoop\shims\scoop" install $pkg
 }
 
 # Install fonts
 Write-Host "Installing fonts..."
 {{ range .packages.windows.fonts -}}
-& "$env:USERPROFILE\scoop\shims\scoop.exe" install {{ . }}
+& "$env:USERPROFILE\scoop\shims\scoop" install {{ . }}
 {{ end }}
 
 Write-Host "Package installation complete."
