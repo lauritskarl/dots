@@ -5,15 +5,5 @@ if (!(Get-Command scoop -ErrorAction SilentlyContinue)) {
     Write-Host "Installing Scoop..."
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
     Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-    
-    # Add Scoop to current session PATH
-    $env:PATH = "$env:USERPROFILE\scoop\shims;$env:PATH"
-    Write-Host "Scoop added to current session PATH"
-} else {
-    # Ensure Scoop is in PATH even if already installed
-    if ($env:PATH -notlike "*$env:USERPROFILE\scoop\shims*") {
-        $env:PATH = "$env:USERPROFILE\scoop\shims;$env:PATH"
-        Write-Host "Scoop added to current session PATH"
-    }
 }
 {{ end -}}
