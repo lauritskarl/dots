@@ -2,7 +2,7 @@
 experimental = true
 color_theme = "catppuccin"
 idiomatic_version_file_enable_tools = ["python", "node"]
-trusted_config_paths = ["~/Documents/Projects"]
+trusted_config_paths = ["~/Documents/Projects", "/workspace"]
 
 [settings.npm]
 package_manager = "bun"
@@ -15,7 +15,6 @@ node = "latest"
 bun = "latest"
 go = "latest"
 rust = "latest"
-
 uv = "latest"
 cargo-binstall = "latest"
 bottom = "latest"
@@ -24,7 +23,6 @@ bat = "latest"
 yazi = "latest"
 # helix = "latest"
 github-cli = "latest"
-
 scooter = "latest"
 xh = "latest"
 lazydocker = "latest"
@@ -48,7 +46,6 @@ resvg = "latest"
 zoxide = "latest"
 chezmoi = "latest"
 fnox = "latest"
-
 lazyjournal = "latest"
 hurl = "latest"
 marp-cli = "latest"
@@ -85,8 +82,6 @@ harper-ls = "latest"
 "cargo:bandwhich" = "latest"
 "cargo:hl" = "latest"
 "cargo:topgrade" = "latest"
-
-
 starship = "latest"
 ty = "latest"
 rumdl = "latest"
