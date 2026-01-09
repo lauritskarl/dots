@@ -15,8 +15,8 @@ fetch_head = true
 [git]
 max_concurrency = 5
 repos = [
-    "~/Documents/Projects/*/",
-    "~/.config/*/"
+    "{{ .chezmoi.homeDir }}/Documents/Projects/*/",
+    "{{ .chezmoi.homeDir }}/.config/*/"
 ]
 arguments = "--rebase --autostash"
 
