@@ -3,17 +3,14 @@ $ErrorActionPreference = "Stop"
 
 # Packages hash: {{ .packages.windows | toJson | sha256sum }}
 
-# Install Git first (required for bucket operations)
 Write-Host "Installing Git first..."
 & "$env:USERPROFILE\scoop\shims\scoop.ps1" install git
 
-# Add buckets
 Write-Host "Adding Scoop buckets..."
 {{ range .packages.windows.buckets -}}
 & "$env:USERPROFILE\scoop\shims\scoop.ps1" bucket add {{ . }}
 {{ end }}
 
-# Install remaining packages (excluding Git which is already installed)
 Write-Host "Installing remaining Scoop packages..."
 $packages = @(
 {{ range $index, $pkg := .packages.windows.scoop -}}
@@ -27,7 +24,6 @@ foreach ($pkg in $packages) {
     & "$env:USERPROFILE\scoop\shims\scoop.ps1" install $pkg
 }
 
-# Install fonts
 Write-Host "Installing fonts..."
 {{ range .packages.windows.fonts -}}
 & "$env:USERPROFILE\scoop\shims\scoop.ps1" install {{ . }}

@@ -1,13 +1,3 @@
-# Homebrew on Linux
-{{ if eq .chezmoi.os "linux" -}}
-$env.HOMEBREW_PREFIX = "/home/linuxbrew/.linuxbrew"
-$env.HOMEBREW_CELLAR = "/home/linuxbrew/.linuxbrew/Cellar"
-$env.HOMEBREW_REPOSITORY = "/home/linuxbrew/.linuxbrew/Homebrew"
-$env.PATH = ($env.PATH | prepend "/home/linuxbrew/.linuxbrew/bin" | prepend "/home/linuxbrew/.linuxbrew/sbin")
-$env.MANPATH = ($env.MANPATH? | default "" | prepend "/home/linuxbrew/.linuxbrew/share/man")
-$env.INFOPATH = ($env.INFOPATH? | default "" | prepend "/home/linuxbrew/.linuxbrew/share/info")
-{{ end -}}
-
 $env.config.history.file_format = "sqlite"
 $env.config.history.max_size = 1_000_000
 $env.config.show_banner = false

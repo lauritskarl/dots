@@ -2,42 +2,26 @@
 #!/bin/bash
 set -euo pipefail
 
-# Packages hash:
-# common: {{ .packages.common | toJson | sha256sum }}
 # pacman: {{ .packages.linux.arch.pacman | toJson | sha256sum }}
 # aur: {{ .packages.linux.arch.aur | toJson | sha256sum }}
 # flatpaks: {{ .packages.linux.flatpaks | toJson | sha256sum }}
 
-# Ensure brew is in PATH
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# Install pacman packages first (includes flatpak)
 echo "Installing pacman packages..."
 sudo pacman -Syu --noconfirm --needed \
 {{ range .packages.linux.arch.pacman -}}
     {{ . | quote }} \
 {{ end }}
 
-# Setup Flathub if not already configured
 if ! flatpak remote-list | grep -q flathub; then
     echo "Adding Flathub remote..."
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 fi
 
-# Install Homebrew packages and Flatpaks via brew bundle
-echo "Installing Homebrew packages and Flatpaks..."
-brew bundle --file=/dev/stdin <<EOF
-# Common brews (CLI tools)
-{{ range .packages.common.brews -}}
-brew {{ . | quote }}
-{{ end }}
-# Flatpak GUI apps
+echo "Installing Flatpak packages..."
 {{ range .packages.linux.flatpaks -}}
-flatpak {{ . | quote }}
-{{ end -}}
-EOF
+flatpak install -y flathub {{ . | quote }}
+{{ end }}
 
-# Install AUR packages
 echo "Installing AUR packages..."
 if command -v yay &> /dev/null; then
 {{ range .packages.linux.arch.aur -}}

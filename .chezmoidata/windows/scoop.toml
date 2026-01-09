@@ -1,12 +1,14 @@
 [packages.windows]
 scoop = [
     "main/curl",
-    "git",
+    # "7zip",
+    # "main/git",
     "main/gnupg",
     "main/sqlite",
     "main/wget",
     "main/nu",
     "main/mise",
+    "extras/vcredist2022",
     "main/exiftool",
     "main/ffmpeg",
     "main/imagemagick",
@@ -27,7 +29,6 @@ scoop = [
     "extras/signal",
     "extras/tailscale",
     "extras/winbox",
-    "extras/yubioauth",
+    "extras/yubioath",
     "extras/zed",
-    # "7zip",
 ]
