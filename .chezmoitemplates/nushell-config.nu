@@ -10,6 +10,10 @@ $env.config.footer_mode = "auto"
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 
+{{ if eq .chezmoi.os "darwin" -}}
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
+{{ end -}}
+
 mkdir ($nu.data-dir | path join "vendor/autoload")
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
