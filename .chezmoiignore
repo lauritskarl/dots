@@ -1,23 +1,16 @@
 README.md
 
-# Platform-specific nushell config paths
 {{ if ne .chezmoi.os "darwin" }}
-Library/
+private_Library/
+dot_zprofile.tmpl
+dot_Brewfile
 {{ end }}
+
 {{ if ne .chezmoi.os "linux" }}
-.config/nushell/
+private_dot_config/nushell/
 {{ end }}
+
 {{ if ne .chezmoi.os "windows" }}
 AppData/
 config.winget
-{{ end }}
-
-# Fish shell not available on Windows via Scoop
-{{ if eq .chezmoi.os "windows" }}
-.config/fish/
-{{ end }}
-
-# macOS-only files
-{{ if ne .chezmoi.os "darwin" }}
-.zprofile
 {{ end }}

@@ -11,7 +11,6 @@ iex "&{$(irm 'https://get.chezmoi.io/ps1')} -- init --one-shot $GITHUB_USERNAME"
 
 ## Windows Additions
 
-- cURL.cURL
 - OliverBetz.ExifTool
 - Gyan.FFmpeg
 <!--- Git.Git-->
