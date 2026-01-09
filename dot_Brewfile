@@ -10,7 +10,6 @@ brew "helix", args: ["HEAD"]
 brew "imagemagick"
 brew "mas"
 brew "mise"
-brew "mpv"
 brew "nushell"
 brew "openssh"
 brew "poppler"
