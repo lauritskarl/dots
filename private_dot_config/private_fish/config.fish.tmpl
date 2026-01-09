@@ -5,8 +5,6 @@ if status is-interactive
     set --global --export PAGER bat
     {{ if eq .chezmoi.os "darwin" -}}
     eval (/opt/homebrew/bin/brew shellenv)
-    {{ else if eq .chezmoi.os "linux" -}}
-    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
     {{ end -}}
     type -q mise; and mise activate fish | source
     type -q fzf; and fzf --fish | source
