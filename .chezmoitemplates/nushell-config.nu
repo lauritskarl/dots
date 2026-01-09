@@ -19,6 +19,11 @@ mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 mise exec -- starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 mise exec -- zoxide init nushell --cmd cd | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 
+$env.SHELL = "nu"
+$env.EDITOR = "hx"
+$env.VISUAL = "zed"
+$env.PAGER = "bat"
+
 def --env y [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
 	^yazi ...$args --cwd-file $tmp
