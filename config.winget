@@ -67,13 +67,6 @@ resources:
     DeveloperMode: true
     TaskbarAlignment: "Left"
     AppColorMode: "Dark"
-- name: winget_Starship.Starship
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Starship.Starship"
-  properties:
-    id: "Starship.Starship"
-    source: "winget"
 - name: winget_Nushell.Nushell
   type: Microsoft.WinGet/Package
   metadata:
@@ -109,20 +102,6 @@ resources:
   properties:
     id: "RIA.eIDsoftware"
     source: "winget"
-- name: winget_BurntSushi.ripgrep.GNU
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install BurntSushi.ripgrep.GNU"
-  properties:
-    id: "BurntSushi.ripgrep.GNU"
-    source: "winget"
-- name: winget_Byron.dua-cli
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Byron.dua-cli"
-  properties:
-    id: "Byron.dua-cli"
-    source: "winget"
 - name: winget_Git.Git
   type: Microsoft.WinGet/Package
   metadata:
@@ -130,61 +109,12 @@ resources:
   properties:
     id: "Git.Git"
     source: "winget"
-- name: winget_Helix.Helix
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Helix.Helix"
-  properties:
-    id: "Helix.Helix"
-    source: "winget"
-- name: winget_JesseDuffield.lazygit
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install JesseDuffield.lazygit"
-  properties:
-    id: "JesseDuffield.lazygit"
-    source: "winget"
 - name: winget_Mikrotik.Winbox.Beta
   type: Microsoft.WinGet/Package
   metadata:
     description: "Install Mikrotik.Winbox.Beta"
   properties:
     id: "Mikrotik.Winbox.Beta"
-    source: "winget"
-- name: winget_Oven-sh.Bun
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Oven-sh.Bun"
-  properties:
-    id: "Oven-sh.Bun"
-    source: "winget"
-- name: winget_SST.opencode
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install SST.opencode"
-  properties:
-    id: "SST.opencode"
-    source: "winget"
-- name: winget_ajeetdsouza.zoxide
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install ajeetdsouza.zoxide"
-  properties:
-    id: "ajeetdsouza.zoxide"
-    source: "winget"
-- name: winget_ducaale.xh
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install ducaale.xh"
-  properties:
-    id: "ducaale.xh"
-    source: "winget"
-- name: winget_eza-community.eza
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install eza-community.eza"
-  properties:
-    id: "eza-community.eza"
     source: "winget"
 - name: winget_ImputNet.Helium
   type: Microsoft.WinGet/Package

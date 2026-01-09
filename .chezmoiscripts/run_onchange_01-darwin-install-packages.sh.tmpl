@@ -2,24 +2,9 @@
 #!/bin/zsh
 set -euo pipefail
 
-# darwin: {{ .packages.darwin | toJson | sha256sum }}
+echo "Installing Homebrew packages from Brewfile..."
 
-echo "Installing Homebrew packages..."
-
-brew bundle --file=/dev/stdin <<EOF
-# macOS-only brews
-{{ range .packages.darwin.brews -}}
-brew {{ . | quote }}
-{{ end }}
-# Casks
-{{ range .packages.darwin.casks -}}
-cask {{ . | quote }}
-{{ end }}
-# Mac App Store
-{{ range .packages.darwin.mas -}}
-mas {{ .name | quote }}, id: {{ .id }}
-{{ end -}}
-EOF
+brew bundle --file="{{ .chezmoi.homeDir }}/.Brewfile"
 
 echo "Homebrew packages installed successfully."
 {{ end -}}

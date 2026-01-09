@@ -1,33 +1,9 @@
 {{- if eq .chezmoi.os "windows" -}}
 $ErrorActionPreference = "Stop"
 
-# Packages hash: {{ .packages.windows | toJson | sha256sum }}
+Write-Host "Applying winget configuration..."
 
-Write-Host "Installing Git first..."
-& "$env:USERPROFILE\scoop\shims\scoop.ps1" install git
-
-Write-Host "Adding Scoop buckets..."
-{{ range .packages.windows.buckets -}}
-& "$env:USERPROFILE\scoop\shims\scoop.ps1" bucket add {{ . }}
-{{ end }}
-
-Write-Host "Installing remaining Scoop packages..."
-$packages = @(
-{{ range $index, $pkg := .packages.windows.scoop -}}
-{{ if ne $pkg "git" }}
-{{ if $index }}, {{ end }}    {{ $pkg | quote }}
-{{ end }}
-{{ end -}}
-)
-
-foreach ($pkg in $packages) {
-    & "$env:USERPROFILE\scoop\shims\scoop.ps1" install $pkg
-}
-
-Write-Host "Installing fonts..."
-{{ range .packages.windows.fonts -}}
-& "$env:USERPROFILE\scoop\shims\scoop.ps1" install {{ . }}
-{{ end }}
+winget configure --file "{{ .chezmoi.sourceDir }}/config.winget"
 
 Write-Host "Package installation complete."
 {{ end -}}

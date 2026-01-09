@@ -9,19 +9,19 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --one-shot $GITHUB_USERNAME
 iex "&{$(irm 'https://get.chezmoi.io/ps1')} -- init --one-shot $GITHUB_USERNAME"
 ```
 
-## GUI Apps
-
-- Zed
-- Helium
-- Yubico Authenticator
-- Ghostty
-- 1Password
-- Winbox
-- Tailscale
-- RustDesk
-- Signal
-- Filebot (PointPlanck.FileBot) # add to config.winget
+## Windows Additions
 
 - cURL.cURL
+- OliverBetz.ExifTool
+- Gyan.FFmpeg
+- ArtifexSoftware.GhostScript
+<!--- Git.Git-->
+- ImageMagick.ImageMagick
 - 7zip.7zip
--
+- PointPlanck.FileBot
+- RustDesk.RustDesk
+- OpenWhisperSystems.Signal
+- RIA.DigiDoc4
+- Yubico.Authenticator
+- WhatsApp.WhatsApp
+- WireGuard.WireGuard
