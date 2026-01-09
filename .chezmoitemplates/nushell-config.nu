@@ -16,8 +16,8 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-zoxide init nushell --cmd cd | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+mise exec -- starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+mise exec -- zoxide init nushell --cmd cd | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 
 def --env y [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
