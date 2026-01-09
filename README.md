@@ -17,6 +17,7 @@ iex "&{$(irm 'https://get.chezmoi.io/ps1')} -- init --one-shot $GITHUB_USERNAME"
 - ArtifexSoftware.GhostScript
 <!--- Git.Git-->
 - ImageMagick.ImageMagick
+- oschwartz10612.Poppler
 - 7zip.7zip
 - PointPlanck.FileBot
 - RustDesk.RustDesk

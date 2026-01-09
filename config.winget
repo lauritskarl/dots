@@ -130,41 +130,6 @@ resources:
   properties:
     id: "jdx.mise"
     source: "winget"
-- name: winget_jj-vcs.jj
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install jj-vcs.jj"
-  properties:
-    id: "jj-vcs.jj"
-    source: "winget"
-- name: winget_junegunn.fzf
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install junegunn.fzf"
-  properties:
-    id: "junegunn.fzf"
-    source: "winget"
-- name: winget_sharkdp.bat
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install sharkdp.bat"
-  properties:
-    id: "sharkdp.bat"
-    source: "winget"
-- name: winget_sxyazi.yazi
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install sxyazi.yazi"
-  properties:
-    id: "sxyazi.yazi"
-    source: "winget"
-- name: winget_twpayne.chezmoi
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install twpayne.chezmoi"
-  properties:
-    id: "twpayne.chezmoi"
-    source: "winget"
 - name: winget_ZedIndustries.Zed
   type: Microsoft.WinGet/Package
   metadata:
@@ -1091,10 +1056,3 @@ resources:
   properties:
     id: "Microsoft.WindowsTerminal"
     source: "winget"
-- name: msstore_9NFNG39387K0
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install 9NFNG39387K0"
-  properties:
-    id: "9NFNG39387K0"
-    source: "msstore"
