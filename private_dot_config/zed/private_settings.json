@@ -42,7 +42,7 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "claude-haiku-4.5"
+      "model": "claude-haiku-4.5",
     },
     "use_modifier_to_send": true,
     "default_model": {
@@ -79,6 +79,9 @@
     "show_branch_icon": true,
   },
   "terminal": {
+    "shell": {
+      "program": "/opt/homebrew/bin/nu",
+    },
     "toolbar": {
       "breadcrumbs": true,
     },
