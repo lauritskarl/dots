@@ -1,6 +1,5 @@
 [packages.darwin]
 brews = [
-    # macOS-only tools
     "mas",
     "openssh",
 ]

@@ -2,16 +2,11 @@
 pacman = [
     # Build tools (needed for AUR)
     "base-devel",
-    # Terminal (no brew formula)
     "ghostty",
-    # Fonts
     "ttf-monaspace-variable",
-    # System services
     "flatpak",
     "tailscale",
-    # GUI apps (not on Flatpak or prefer native)
     "wireshark-qt",
     "zed",
-    # Disk imaging CLI
     "caligula",
 ]

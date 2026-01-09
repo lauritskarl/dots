@@ -1,29 +1,21 @@
 [packages.windows]
 scoop = [
-    # Core system tools
     "curl",
     "git",
     "gnupg",
     "sqlite",
     "wget",
-    # Shells (need system integration)
     "nu",
-    # Bootstrap tools
     "mise",
-    # Media processing
     "exiftool",
     "ffmpeg",
     "imagemagick",
-    # Development
     "composer",
     "php",
-    # PDF/documents
     "poppler",
-    # Network tools
     "lynx",
     "nmap",
-    "wireshark",
-    # GUI applications
+    # "wireshark",
     "1password",
     "balenaetcher",
     "discord",
@@ -37,6 +29,5 @@ scoop = [
     "winbox",
     "yubico-authenticator",
     "zed",
-    # Other
     "7zip",
 ]
