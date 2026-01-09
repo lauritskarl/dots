@@ -1,9 +1,9 @@
 README.md
 
 {{ if ne .chezmoi.os "darwin" }}
-private_Library/
-dot_zprofile.tmpl
+dot_zprofile
 dot_Brewfile
+private_Library/
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
@@ -11,6 +11,6 @@ private_dot_config/nushell/
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
-AppData/
 config.winget
+AppData/
 {{ end }}
