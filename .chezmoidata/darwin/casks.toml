@@ -1,22 +1,17 @@
 [packages.darwin]
 casks = [
     "1password",
-    "affinity",
     "balenaetcher",
-    "discord",
     "filebot",
     "font-monaspace",
     "font-monaspace-nf",
     "ghostty",
     "helium-browser",
-    "libreoffice",
     "orbstack",
-    "raspberry-pi-imager",
     "rustdesk",
     "signal",
     "tailscale-app",
     "winbox",
-    "wireshark-app",
     "yubico-authenticator",
     "zed",
 ]

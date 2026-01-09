@@ -67,117 +67,12 @@ resources:
     DeveloperMode: true
     TaskbarAlignment: "Left"
     AppColorMode: "Dark"
-- name: winget_7zip.7zip
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install 7zip.7zip"
-  properties:
-    id: "7zip.7zip"
-    source: "winget"
-- name: winget_Audacity.Audacity
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Audacity.Audacity"
-  properties:
-    id: "Audacity.Audacity"
-    source: "winget"
-- name: winget_GIMP.GIMP.3
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install GIMP.GIMP.3"
-  properties:
-    id: "GIMP.GIMP.3"
-    source: "winget"
-- name: winget_Inkscape.Inkscape
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Inkscape.Inkscape"
-  properties:
-    id: "Inkscape.Inkscape"
-    source: "winget"
-- name: winget_IrfanSkiljan.IrfanView
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install IrfanSkiljan.IrfanView"
-  properties:
-    id: "IrfanSkiljan.IrfanView"
-    source: "winget"
-- name: winget_Mozilla.Firefox.ESR.et
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Mozilla.Firefox.ESR.et"
-  properties:
-    id: "Mozilla.Firefox.ESR.et"
-    source: "winget"
-- name: winget_Mozilla.Thunderbird.et
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Mozilla.Thunderbird.et"
-  properties:
-    id: "Mozilla.Thunderbird.et"
-    source: "winget"
-- name: winget_Notepad++.Notepad++
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Notepad++.Notepad++"
-  properties:
-    id: "Notepad++.Notepad++"
-    source: "winget"
-- name: winget_RustDesk.RustDesk
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install RustDesk.RustDesk"
-  properties:
-    id: "RustDesk.RustDesk"
-    source: "winget"
-- name: winget_Scribus.Scribus
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Scribus.Scribus"
-  properties:
-    id: "Scribus.Scribus"
-    source: "winget"
-- name: winget_SumatraPDF.SumatraPDF
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install SumatraPDF.SumatraPDF"
-  properties:
-    id: "SumatraPDF.SumatraPDF"
-    source: "winget"
-- name: winget_VideoLAN.VLC
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install VideoLAN.VLC"
-  properties:
-    id: "VideoLAN.VLC"
-    source: "winget"
-- name: winget_Oracle.JavaRuntimeEnvironment
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Oracle.JavaRuntimeEnvironment"
-  properties:
-    id: "Oracle.JavaRuntimeEnvironment"
-    source: "winget"
 - name: winget_Starship.Starship
   type: Microsoft.WinGet/Package
   metadata:
     description: "Install Starship.Starship"
   properties:
     id: "Starship.Starship"
-    source: "winget"
-- name: winget_dotPDN.PaintDotNet
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install dotPDN.PaintDotNet"
-  properties:
-    id: "dotPDN.PaintDotNet"
-    source: "winget"
-- name: winget_Google.GoogleDrive
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Google.GoogleDrive"
-  properties:
-    id: "Google.GoogleDrive"
     source: "winget"
 - name: winget_Nushell.Nushell
   type: Microsoft.WinGet/Package
@@ -186,47 +81,12 @@ resources:
   properties:
     id: "Nushell.Nushell"
     source: "winget"
-- name: winget_Open-Shell.Open-Shell-Menu
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Open-Shell.Open-Shell-Menu"
-  properties:
-    id: "Open-Shell.Open-Shell-Menu"
-    source: "winget"
-- name: winget_Zoom.Zoom
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Zoom.Zoom"
-  properties:
-    id: "Zoom.Zoom"
-    source: "winget"
-- name: winget_Google.EarthPro
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Google.EarthPro"
-  properties:
-    id: "Google.EarthPro"
-    source: "winget"
 - name: winget_AgileBits.1Password
   type: Microsoft.WinGet/Package
   metadata:
     description: "Install AgileBits.1Password"
   properties:
     id: "AgileBits.1Password"
-    source: "winget"
-- name: winget_Adobe.Acrobat.Reader.64-bit
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Adobe.Acrobat.Reader.64-bit"
-  properties:
-    id: "Adobe.Acrobat.Reader.64-bit"
-    source: "winget"
-- name: winget_TheDocumentFoundation.LibreOffice
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install TheDocumentFoundation.LibreOffice"
-  properties:
-    id: "TheDocumentFoundation.LibreOffice"
     source: "winget"
 - name: winget_Microsoft.PowerShell
   type: Microsoft.WinGet/Package
@@ -235,55 +95,6 @@ resources:
   properties:
     id: "Microsoft.PowerShell"
     source: "winget"
-- name: winget_PuTTY.PuTTY
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install PuTTY.PuTTY"
-  properties:
-    id: "PuTTY.PuTTY"
-    source: "winget"
-- name: winget_Google.Chrome
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Google.Chrome"
-  properties:
-    id: "Google.Chrome"
-    source: "winget"
-- name: winget_OxfordUniversityPressELT.OxfordLearnersBookshelf
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install OxfordUniversityPressELT.OxfordLearnersBookshelf"
-  properties:
-    id: "OxfordUniversityPressELT.OxfordLearnersBookshelf"
-    source: "winget"
-- name: winget_Microsoft.Edge
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.Edge"
-  properties:
-    id: "Microsoft.Edge"
-    source: "winget"
-- name: winget_Python.Python.2
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Python.Python.2"
-  properties:
-    id: "Python.Python.2"
-    source: "winget"
-- name: winget_Microsoft.VCRedist.2015+.x86
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.VCRedist.2015+.x86"
-  properties:
-    id: "Microsoft.VCRedist.2015+.x86"
-    source: "winget"
-- name: winget_Microsoft.DotNet.DesktopRuntime.8
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.DotNet.DesktopRuntime.8"
-  properties:
-    id: "Microsoft.DotNet.DesktopRuntime.8"
-    source: "winget"
 - name: winget_Tailscale.Tailscale
   type: Microsoft.WinGet/Package
   metadata:
@@ -291,26 +102,12 @@ resources:
   properties:
     id: "Tailscale.Tailscale"
     source: "winget"
-- name: winget_Microsoft.VCRedist.2008.x86
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.VCRedist.2008.x86"
-  properties:
-    id: "Microsoft.VCRedist.2008.x86"
-    source: "winget"
 - name: winget_RIA.eIDsoftware
   type: Microsoft.WinGet/Package
   metadata:
     description: "Install RIA.eIDsoftware"
   properties:
     id: "RIA.eIDsoftware"
-    source: "winget"
-- name: winget_Microsoft.VCRedist.2015+.x64
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.VCRedist.2015+.x64"
-  properties:
-    id: "Microsoft.VCRedist.2015+.x64"
     source: "winget"
 - name: winget_BurntSushi.ripgrep.GNU
   type: Microsoft.WinGet/Package
@@ -353,13 +150,6 @@ resources:
     description: "Install Mikrotik.Winbox.Beta"
   properties:
     id: "Mikrotik.Winbox.Beta"
-    source: "winget"
-- name: winget_Microsoft.OneDrive
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.OneDrive"
-  properties:
-    id: "Microsoft.OneDrive"
     source: "winget"
 - name: winget_Oven-sh.Bun
   type: Microsoft.WinGet/Package
@@ -1364,34 +1154,6 @@ resources:
       version: "1.0"
       properties: {}
       name: "ZoomIt"
-- name: winget_Microsoft.Teams
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.Teams"
-  properties:
-    id: "Microsoft.Teams"
-    source: "winget"
-- name: winget_Microsoft.AppInstaller
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.AppInstaller"
-  properties:
-    id: "Microsoft.AppInstaller"
-    source: "winget"
-- name: winget_Microsoft.UI.Xaml.2.8
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.UI.Xaml.2.8"
-  properties:
-    id: "Microsoft.UI.Xaml.2.8"
-    source: "winget"
-- name: winget_Microsoft.VCLibs.Desktop.14
-  type: Microsoft.WinGet/Package
-  metadata:
-    description: "Install Microsoft.VCLibs.Desktop.14"
-  properties:
-    id: "Microsoft.VCLibs.Desktop.14"
-    source: "winget"
 - name: winget_Microsoft.WindowsTerminal
   type: Microsoft.WinGet/Package
   metadata:

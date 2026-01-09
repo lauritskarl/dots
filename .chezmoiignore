@@ -9,6 +9,7 @@ Library/
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 AppData/
+config.winget
 {{ end }}
 
 # Fish shell not available on Windows via Scoop
