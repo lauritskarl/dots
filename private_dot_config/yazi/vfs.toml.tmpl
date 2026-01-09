@@ -1,25 +1,9 @@
-[services.nas]
+{{ range $name, $server := .servers -}}
+[services.{{ $name }}]
 type = "sftp"
-host = {{ .services.nas.host | quote }}
-user = {{ .services.nas.user | quote }}
-port = {{ .services.nas.port }}
-{{ if eq .chezmoi.os "darwin" -}}
-identity_agent = "{{ .chezmoi.homeDir }}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-{{ else if eq .chezmoi.os "linux" -}}
-identity_agent = "{{ .chezmoi.homeDir }}/.1password/agent.sock"
-{{ else if eq .chezmoi.os "windows" -}}
-identity_agent = "~/.1password/agent.sock"
-{{- end }}
+host = {{ $server.host | quote }}
+user = {{ $server.user | quote }}
+port = {{ $server.port }}
+identity_agent = {{ $.onepasswordAgent | quote }}
 
-[services.archive]
-type = "sftp"
-host = {{ .services.storagebox.host | quote }}
-user = {{ .services.storagebox.user | quote }}
-port = {{ .services.storagebox.port }}
-{{ if eq .chezmoi.os "darwin" -}}
-identity_agent = "{{ .chezmoi.homeDir }}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-{{ else if eq .chezmoi.os "linux" -}}
-identity_agent = "{{ .chezmoi.homeDir }}/.1password/agent.sock"
-{{ else if eq .chezmoi.os "windows" -}}
-identity_agent = "~/.1password/agent.sock"
-{{- end }}
+{{ end -}}
