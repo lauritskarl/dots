@@ -1,10 +1,6 @@
 [packages.linux]
 flatpaks = [
-    "com.discordapp.Discord",
     "com.mikrotik.WinBox",
-    "com.rustdesk.RustDesk",
     "net.filebot.FileBot",
-    "org.libreoffice.LibreOffice",
-    "org.raspberrypi.rpi-imager",
     "org.signal.Signal",
 ]
