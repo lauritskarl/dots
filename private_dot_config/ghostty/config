@@ -3,4 +3,4 @@ font-family = "Monaspace Neon NF Regular"
 font-size = 14
 maximize = true
 shell-integration-features = "no-cursor,ssh-env"
-command = "nu"
+command = "/opt/homebrew/bin/nu"
