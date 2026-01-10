@@ -13,12 +13,13 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
+mise exec -- carapace _carapace nushell | save -f ($nu.data-dir | path join "vendor/autoload/carapace.nu")
 mise exec -- starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 mise exec -- zoxide init nushell --cmd cd | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 $env.PROMPT_INDICATOR_VI_INSERT = ""
-
 $env.SHELL = "nu"
 $env.PAGER = "bat"
 $env.EDITOR = "hx"
