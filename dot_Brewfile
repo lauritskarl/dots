@@ -2,6 +2,7 @@ brew "exiftool"
 brew "gmp"
 brew "openssl@3"
 brew "ffmpeg"
+brew "fish"
 brew "gnupg"
 brew "helix", args: ["HEAD"]
 brew "imagemagick"
