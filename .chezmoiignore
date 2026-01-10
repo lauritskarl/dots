@@ -8,6 +8,7 @@ private_Library/
 
 {{ if ne .chezmoi.os "linux" }}
 private_dot_config/nushell/
+private_dot_config/lazygit/
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
