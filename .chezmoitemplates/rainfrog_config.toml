@@ -1,0 +1,2 @@
+[db]
+icd0007 = { host = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/server" | quote }}, driver = "mysql", port = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/port" }}, database = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/database" | quote }}, username = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/username" | quote }} }
