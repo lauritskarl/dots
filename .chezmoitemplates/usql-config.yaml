@@ -1,19 +1,19 @@
 connections:
   pg-local:
     protocol: postgresql
-    username: "local"
-    password: "local"
-    hostname: "localhost"
+    username: local
+    password: local
+    hostname: localhost
     port: 5432
-    database: "local"
+    database: local
     
   mysql-local:
     protocol: mysql
-    username: "local"
-    password: "local"
-    hostname: "localhost"
+    username: local
+    password: local
+    hostname: localhost
     port: 3306
-    database: "local"
+    database: local
     
   icd0007:
     protocol: mysql
