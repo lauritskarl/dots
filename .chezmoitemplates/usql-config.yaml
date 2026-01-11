@@ -1,20 +1,18 @@
 connections:
-  pg-local:
+  pg:
     protocol: postgresql
     username: local
     password: local
     hostname: localhost
     port: 5432
     database: local
-    
-  mysql-local:
+  mysql:
     protocol: mysql
     username: local
     password: local
     hostname: localhost
     port: 3306
     database: local
-    
   icd0007:
     protocol: mysql
     username: {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/username" }}
