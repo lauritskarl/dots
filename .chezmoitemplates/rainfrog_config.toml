@@ -1,4 +1,4 @@
 [db]
-pg-local = { host = "localhost", driver = "postgres", port = 5432, database = "rainfrog", username = "rainfrog" }
-mysql-local = { host = "localhost", driver = "mysql", port = 3306, database = "rainfrog", username = "rainfrog" }
+pg-local = { host = "localhost", driver = "postgres", port = 5432, database = "local", username = "local" }
+mysql-local = { host = "localhost", driver = "mysql", port = 3306, database = "local", username = "local" }
 icd0007 = { host = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/server" | quote }}, driver = "mysql", port = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/port" }}, database = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/database" | quote }}, username = {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/username" | quote }} }
