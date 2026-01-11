@@ -42,3 +42,4 @@ alias lg = lazygit
 alias ld = lazydocker
 alias lj = lazyjournal
 alias oc = opencode
+alias dc = docker-cli-plugin-docker-compose
