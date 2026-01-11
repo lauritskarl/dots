@@ -1,0 +1,8 @@
+connections:
+  icd0007:
+    protocol: mysql
+    username: {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/username" }}
+    password: {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/password" }}
+    hostname: {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/server" }}
+    port: {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/port" }}
+    database: {{ onepasswordRead "op://Personal/smoe7oxcj5brituvxllr5npjgi/database" }}
