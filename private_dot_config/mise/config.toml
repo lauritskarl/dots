@@ -1,0 +1,38 @@
+[settings]
+lockfile = true
+
+[env]
+SHELL="fish"
+EDITOR="hx"
+VISUAL="hx"
+
+[bootstrap.packages]
+"brew:ffmpeg" = "latest"
+"brew:exiftool" = "latest"
+"brew:imagemagick" = "latest"
+"brew:resvg" = "latest"
+"brew:poppler" = "latest"
+"brew:p7zip" = "latest"
+
+[tools]
+usage = "latest"
+chezmoi = "latest"
+atuin = "latest"
+starship = "latest"
+zoxide = "latest"
+fzf = "latest"
+fd = "latest"
+rg = "latest"
+bat = "latest"
+eza = "latest"
+yazi = "latest"
+tmux = "latest"
+helix = "latest"
+pi = "latest"
+gh = "latest"
+gitsign = "latest"
+lazygit = "latest"
+lazydocker = "latest"
+uv = "latest"
+pnpm = "latest"
+go = "latest"
