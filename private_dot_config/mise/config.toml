@@ -7,6 +7,7 @@ EDITOR="hx"
 VISUAL="hx"
 
 [bootstrap.packages]
+"brew:mosh" = "latest"
 "brew:ffmpeg" = "latest"
 "brew:exiftool" = "latest"
 "brew:imagemagick" = "latest"
